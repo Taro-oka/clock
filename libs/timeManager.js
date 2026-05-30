@@ -44,7 +44,7 @@ class TimeManager {
     const currentHour = now.getHours();
     const currentAngle = currentHour * 30;
     this.hourHand.style.transform = `translateX(-50%) rotate(${
-      currentAngle + (30 * currentMinute) / 100
+      currentAngle + (currentMinute / 60) * 30
     }deg)`;
   }
 
